@@ -204,7 +204,7 @@ try {
       }
     
      if(incomingRefreshToken!==user?.refreshToken){
-            throw new apiError(401,"Referesh token is expiredor used")
+            throw new apiError(401,"Referesh token is expired or used")
      }
     
     const {newRefreshToken,accessToken}=await generateAccessTokenAndRefreshTokens(user._id)
